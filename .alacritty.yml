@@ -1,0 +1,55 @@
+shell:
+  program: /bin/zsh
+  args:
+    - --login
+    - -c
+    - tmux -v
+font:
+  size: 20.0
+  normal:
+    family: FiraCode Nerd Font
+  bold:
+    family: FiraCode Nerd Font
+  italic:
+    family: FiraCode Nerd Font
+colors:
+  primary:
+    background: '0x20201d'
+    foreground: '0xa6a28c'
+
+  cursor:
+    text: '0x20201d'
+    cursor: '0xa6a28c'
+
+  normal:
+    black:   '0x20201d'
+    red:     '0xd73737'
+    green:   '0x60ac39'
+    yellow:  '0xae9513'
+    blue:    '0x6684e1'
+    magenta: '0xb854d4'
+    cyan:    '0x1fad83'
+    white:   '0xa6a28c'
+
+  bright:
+    black:   '0x7d7a68'
+    red:     '0xd73737'
+    green:   '0x60ac39'
+    yellow:  '0xae9513'
+    blue:    '0x6684e1'
+    magenta: '0xb854d4'
+    cyan:    '0x1fad83'
+    white:   '0xfefbec'
+
+  indexed_colors:
+    - { index: 16, color: '0xb65611' }
+    - { index: 17, color: '0xd43552' }
+    - { index: 18, color: '0x292824' }
+    - { index: 19, color: '0x6e6b5e' }
+    - { index: 20, color: '0x999580' }
+    - { index: 21, color: '0xe8e4cf' }
+key_bindings:
+  - { key: PageUp,   mods: Shift, action: ScrollPageUp,   mode: ~Alt       }
+  - { key: PageDown, mods: Shift, action: ScrollPageDown, mode: ~Alt       }
+  - { key: Home,     mods: Shift, action: ScrollToTop,    mode: ~Alt       }
+  - { key: End,      mods: Shift, action: ScrollToBottom, mode: ~Alt       }

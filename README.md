@@ -1,4 +1,4 @@
-# My configuraions
+# My configurations
 
 These configurations apply for the following stack:
 

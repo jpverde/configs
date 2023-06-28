@@ -1,9 +1,5 @@
 shell:
-  program: /bin/zsh
-  args:
-    - --login
-    - -c
-    - tmux -v
+  program: /opt/homebrew/bin/tmux
 font:
   size: 20.0
   normal:

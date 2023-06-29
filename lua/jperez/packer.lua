@@ -44,5 +44,7 @@ return require('packer').startup(function(use)
 	}
 
     use('nvim-tree/nvim-tree.lua')
+    use('BurntSushi/ripgrep')
+    use('nvim-lua/plenary.nvim')
 
 end)

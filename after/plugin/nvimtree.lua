@@ -1,4 +1,7 @@
-require("nvim-tree").setup({
+local nvimtree = require("nvim-tree")
+local api = require("nvim-tree.api")
+
+nvimtree.setup({
   renderer = {
     icons = {
       show = {
@@ -25,3 +28,7 @@ require("nvim-tree").setup({
     },
   },
 })
+
+vim.keymap.set('n', '<leader>no', function() api.tree.open() end)
+vim.keymap.set('n', '<leader>nc', function() api.tree.close() end)
+

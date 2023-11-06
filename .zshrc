@@ -1,5 +1,4 @@
-if [ -e /nix/var/nix/profiles/default/etc/profile.d/nix.sh ]; then . /nix/var/nix/profiles/default/etc/profile.d/nix.sh; fi # added by Nix installer ]
-
+if [ -e /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh ]; then . /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh; fi # added by Nix installer ]
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 fpath+=${ZDOTDIR:-~}/.zsh_functions
@@ -30,3 +29,27 @@ source <(direnv hook zsh)
 
 # Okta credentials
 export OKTA_EMAIL=jperez@fluidattacks.com
+
+# Default terminal editor
+export EDITOR="nvim"
+
+
+# bun completions
+[ -s "/Users/jperez/.bun/_bun" ] && source "/Users/jperez/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Turso
+export PATH="/Users/jperez/.turso:$PATH"
+
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# pnpm
+export PNPM_HOME="/Users/jperez/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm endPROG=sg source /Users/jperez/.sourcegraph/sg.zsh_autocomplete
